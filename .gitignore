@@ -175,5 +175,6 @@ venv.bak/
 
 # End of https://www.gitignore.io/api/python
 
+/.python_dependencies
 # used for testing
 test/output_actual/
