@@ -129,12 +129,6 @@ def nozbe_to_org_mode(nozbe_data_file, org_mode_dir):
         todo.heading = name
         todo.level = 1
         todo.todo = nozbe_task_to_org_mode_status(task)
-        # comments
-        for heading in nozbe_task_comments(task):
-            comment = PyOrgMode.OrgNode.Element()
-            comment.heading = heading
-            comment.level = todo.level + 1
-            todo.append_clean(comment)
         # deadline
         deadline = nozbe_task_to_org_mode_deadline(task)
         if deadline is not None:
@@ -145,6 +139,12 @@ def nozbe_to_org_mode(nozbe_data_file, org_mode_dir):
         # nozbe id for future TODO of mutating rather than overwriting file
         props.append(PyOrgMode.OrgDrawer.Property("NOZBE_TASK_ID", id))
         todo.append_clean(props)
+        # comments
+        for heading in nozbe_task_comments(task):
+            comment = PyOrgMode.OrgNode.Element()
+            comment.heading = heading
+            comment.level = todo.level + 1
+            todo.append_clean(comment)
         org.root.append_clean(todo)
     # Save org-mode objects to files
     for project in projects.values():

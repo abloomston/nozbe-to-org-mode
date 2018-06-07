@@ -1,12 +1,12 @@
 * TODO A Task to be done
-** Comment 1
 :PROPERTIES:
 :NOZBE_TASK_ID: 7D8E6646-8198-4E95-9FDC-4DB1353B9670
 :END:
-* DONE Another Task to be done
 ** Comment 1
-** Comment 2
-** Comment 3
+* DONE Another Task to be done
 :PROPERTIES:
 :NOZBE_TASK_ID: 89B46478-7869-43CC-94F0-CB043F70C1E1
 :END:
+** Comment 1
+** Comment 2
+** Comment 3
