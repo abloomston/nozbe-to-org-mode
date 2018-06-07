@@ -38,7 +38,7 @@ make dependencies
 
 Navigate to the [Nozbe Account Settings Page](https://app.nozbe.com/#settings-account) and follow instructions under **Backup your data** to download a ZIP of your data. Extract `data.json` from the ZIP file.
 
-### Write to org-mode files
+### Write org-mode files
 
 **This overwrites org-mode files, be careful!**
 
