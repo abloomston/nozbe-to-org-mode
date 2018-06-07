@@ -29,6 +29,11 @@ python_dependencies: pyenv .python_dependencies
 
 dependencies: python_dependencies
 
-all: dependencies
+test: dependencies
+	mkdir -p test/output_actual
+	python nozbe_to_org_mode.py test/input/data.json test/output_actual
+	diff test/output_actual test/output_expected
 
-.PHONY: clean pyenv deactivate_pyenv python_dependencies dependencies all
+all: dependencies test
+
+.PHONY: clean pyenv deactivate_pyenv python_dependencies dependencies test all

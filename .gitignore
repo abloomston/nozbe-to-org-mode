@@ -176,4 +176,4 @@ venv.bak/
 # End of https://www.gitignore.io/api/python
 
 # used for testing
-tmp
+test/output_actual/

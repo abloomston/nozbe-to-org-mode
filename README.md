@@ -1,6 +1,6 @@
 # nozbe-to-org-mode
 
-Tool for converting nozbe -> org-mode files. I used this for a one-time export from Nozbe and don't actively run it, "buyer" beware.
+Tool for converting [Nozbe](https://nozbe.com/) to a set of [org-mode](https://orgmode.org/) files. I used this for a one-time export from Nozbe and don't actively run it, so "buyer" beware.
 
 ## What is converted
 
@@ -12,7 +12,16 @@ Tool for converting nozbe -> org-mode files. I used this for a one-time export f
 
 * Notes
 * File attachments
-* Anything not listed in [what is converted](#what-is-converted)
+* Recurring deadlines (just the most recent deadline at time of [export](#export-nozbe-data) is converted)
+* Anything else not explicitly listed in [what is converted](#what-is-converted)
+
+## Testing
+
+Review [test/input/data.json](./test/input/data.json) for a minimal test input file. The org-mode files in [test/output_expected](./test/output_expected/) show the expected org-mode files created. You can test this by running:
+
+```sh
+make test
+```
 
 ## Usage
 
